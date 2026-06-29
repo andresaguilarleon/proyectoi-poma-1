@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talleres culturales en Cusco - Aprende cocina peruana, textiles ancestrales, cerámica y más con maestros locales">
+    <title>Talleres Culturales | Quechuas Expeditions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2d5016;
+            --secondary-color: #4a7c2e;
+            --accent-color: #d4af37;
+            --text-dark: #2c3e50;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            transition: var(--transition);
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        .logo:hover .logo-text {
+            color: var(--secondary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--secondary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        /* Hero Section - Similar to About Us page */
+        .page-hero {
+            height: 50vh;
+            min-height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            margin-top: 70px;
+            position: relative;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--bg-light);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb ul {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        .breadcrumb span {
+            color: #999;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .intro-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .intro-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            max-width: 800px;
+            margin: 2rem auto 0;
+        }
+
+        /* Workshops Grid Section */
+        .workshops-section {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .workshops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .workshop-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .workshop-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .workshop-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .workshop-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .workshop-card:hover .workshop-image img {
+            transform: scale(1.1);
+        }
+
+        .workshop-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .workshop-content {
+            padding: 2rem;
+        }
+
+        .workshop-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .workshop-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .workshop-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .detail-item i {
+            color: var(--secondary-color);
+        }
+
+        .workshop-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            color: #999;
+            font-weight: normal;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Why Choose Us Section */
+        .why-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .why-card:hover .why-icon {
+            background: var(--primary-color);
+            color: white;
+            transform: rotateY(360deg);
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .why-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 5rem 2rem;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .testimonials-section .section-title h2 {
+            color: white;
+        }
+
+        .testimonials-section .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
+
+        .stars {
+            color: var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(rgba(45, 80, 22, 0.9), rgba(45, 80, 22, 0.9)),
+                        url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920') center/cover;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-white:hover {
+            background: var(--accent-color);
+            color: var(--text-dark);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--text-light);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .workshops-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Quechuas Expeditions Logo" class="logo-img">
+                <span class="logo-text">Quechuas Expeditions</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#destinos">Destinos</a></li>
+                <li><a href="index.html#tours">Tours</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="talleres.html" class="active">Talleres</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Talleres Culturales</h1>
+            <p>Sumérgete en la riqueza cultural del Perú aprendiendo directamente de maestros artesanos y chefs locales</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><span>/</span></li>
+                <li>Talleres Culturales</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <h2>Experiencias Auténticas</h2>
+            <p>En Quechuas Expeditions creemos que viajar es mucho más que visitar lugares. Es conectar con las personas, aprender sus tradiciones y llevarse consigo un pedazo de su cultura. Nuestros talleres culturales te ofrecen la oportunidad única de aprender habilidades ancestrales directamente de los maestros locales, creando recuerdos inolvidables y apoyando a las comunidades andinas.</p>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section class="workshops-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Talleres</h2>
+                <p>Elige entre nuestras experiencias culturales diseñadas para sumergirte en la tradición peruana</p>
+            </div>
+
+            <div class="workshops-grid">
+                <!-- Workshop 1: Cocina Peruana -->
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800" alt="Taller de Cocina Peruana">
+                        <span class="workshop-badge">Más Popular</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Taller de Cocina Peruana Tradicional</h3>
+                        <p>Aprende a preparar los platos más emblemáticos de la gastronomía peruana: ceviche, lomo saltado, ají de gallina y más. Cocinarás con ingredientes frescos del mercado local y técnicas transmitidas por generaciones.</p>
+                        <div class="workshop-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Máx. 8 personas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Incluye almuerzo</span>
+                            </div>
+                        </div>
+                        <div class="workshop-price">
+                            <div class="price">$65 <span>/persona</span></div>
+                            <a href="#contacto" class="btn">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop 2: Textiles Andinos -->
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="Taller de Textiles">
+                        <span class="workshop-badge">Cultural</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Taller de Textiles Andinos</h3>
+                        <p>Descubre el arte milenario del tejido andino. Aprenderás sobre tintes naturales, técnicas de hilado y los significados simbólicos de los diseños tradicionales. Te llevarás tu propia pieza tejida como recuerdo.</p>
+                        <div class="workshop-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3 horas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Máx. 6 personas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Llevas tu creación</span>
+                            </div>
+                        </div>
+                        <div class="workshop-price">
+                            <div class="price">$55 <span>/persona</span></div>
+                            <a href="#contacto" class="btn">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop 3: Cerámica -->
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800" alt="Taller de Cerámica">
+                        <span class="workshop-badge">Artesanal</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Taller de Cerámica Precolombina</h3>
+                        <p>Conecta con la historia milenaria del Perú creando tu propia pieza de cerámica inspirada en las culturas precolombinas. Aprenderás técnicas ancestrales de modelado y decoración con arcilla local.</p>
+                        <div class="workshop-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>2.5 horas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Máx. 10 personas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-palette"></i>
+                                <span>Todos los niveles</span>
+                            </div>
+                        </div>
+                        <div class="workshop-price">
+                            <div class="price">$50 <span>/persona</span></div>
+                            <a href="#contacto" class="btn">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop 4: Pisco Sour -->
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800" alt="Taller de Pisco">
+                        <span class="workshop-badge">Gastronómico</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Taller de Coctelería: Pisco Sour</h3>
+                        <p>Domina el arte de preparar el cóctel nacional del Perú. Aprenderás sobre la historia del pisco, sus variedades y las técnicas profesionales para crear el Pisco Sour perfecto y otras bebidas tradicionales.</p>
+                        <div class="workshop-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>2 horas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Máx. 12 personas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-wine-glass"></i>
+                                <span>Degustación incluida</span>
+                            </div>
+                        </div>
+                        <div class="workshop-price">
+                            <div class="price">$45 <span>/persona</span></div>
+                            <a href="#contacto" class="btn">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop 5: Música Andina -->
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800" alt="Taller de Música">
+                        <span class="workshop-badge">Musical</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Taller de Música Andina</h3>
+                        <p>Aprende a tocar instrumentos tradicionales andinos como la quena, el charango o las zampoñas. Conoce las melodías ancestrales y su significado cultural mientras creas música con músicos locales expertos.</p>
+                        <div class="workshop-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>2 horas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Máx. 8 personas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-music"></i>
+                                <span>Sin experiencia previa</span>
+                            </div>
+                        </div>
+                        <div class="workshop-price">
+                            <div class="price">$40 <span>/persona</span></div>
+                            <a href="#contacto" class="btn">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop 6: Chocolate -->
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?w=800" alt="Taller de Chocolate">
+                        <span class="workshop-badge">Delicioso</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Taller de Chocolate Peruano</h3>
+                        <p>Descubre el proceso del cacao peruano, considerado uno de los mejores del mundo. Desde la selección del grano hasta la creación de chocolates artesanales con sabores únicos andinos.</p>
+                        <div class="workshop-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3 horas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Máx. 10 personas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-candy-cane"></i>
+                                <span>Te llevas tus creaciones</span>
+                            </div>
+                        </div>
+                        <div class="workshop-price">
+                            <div class="price">$60 <span>/persona</span></div>
+                            <a href="#contacto" class="btn">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por Qué Elegir Nuestros Talleres?</h2>
+                <p>Ofrecemos experiencias auténticas que van más allá del turismo convencional</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Maestros Locales</h3>
+                    <p>Aprende directamente de artesanos y chefs con décadas de experiencia, guardianes de tradiciones ancestrales</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Grupos Pequeños</h3>
+                    <p>Mantenemos grupos reducidos para garantizar atención personalizada y una experiencia más íntima</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Impacto Social</h3>
+                    <p>Tu participación apoya directamente a las comunidades locales y ayuda a preservar sus tradiciones</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificado</h3>
+                    <p>Recibe un certificado de participación firmado por los maestros artesanos al finalizar cada taller</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo Que Dicen Nuestros Alumnos</h2>
+                <p>Experiencias reales de quienes vivieron nuestros talleres</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Laura Martínez" class="testimonial-avatar">
+                        <div>
+                            <h4>Laura Martínez</h4>
+                            <p>España</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"El taller de cocina fue increíble. Aprendí a hacer ceviche auténtico y me llevé recetas que ahora preparo en casa. La chef fue muy paciente y divertida."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="testimonial-avatar">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>Canadá</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The textile workshop was a highlight of my trip to Cusco. Learning about natural dyes and weaving techniques from local artisans was truly inspiring."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Wilson" class="testimonial-avatar">
+                        <div>
+                            <h4>Emma Wilson</h4>
+                            <p>Reino Unido</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"J'ai adoré le cours de céramique. C'était une expérience très authentique et les instructeurs étaient passionnés. Je recommande vivement!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para Vivir una Experiencia Única?</h2>
+            <p>Reserva tu taller hoy y lleva contigo un pedazo de la cultura peruana</p>
+            <div class="cta-buttons">
+                <a href="#contacto" class="btn btn-white">Reservar Ahora</a>
+                <a href="https://wa.me/51984123456" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Reserva Tu Taller</h2>
+                <p>Contáctanos para reservar tu experiencia o solicitar información</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p>¿Tienes preguntas sobre nuestros talleres? ¿Quieres organizar un taller privado para tu grupo? Estamos aquí para ayudarte.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Dirección</strong>
+                                <p>Calle Plateros 356, Cusco, Perú</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p>+51 984 123 456</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>talleres@quechuasexpeditions.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Horario de Talleres</strong>
+                                <p>Lun - Sáb: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/51984123456" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-form">
+
+                    <form id="contactForm" action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="workshop">Taller de Interés</label>
+                            <select id="workshop" name="workshop">
+                                <option value="">Selecciona un taller</option>
+                                <option value="cocina">Cocina Peruana Tradicional</option>
+                                <option value="textiles">Textiles Andinos</option>
+                                <option value="ceramica">Cerámica Precolombina</option>
+                                <option value="pisco">Coctelería: Pisco Sour</option>
+                                <option value="musica">Música Andina</option>
+                                <option value="chocolate">Chocolate Peruano</option>
+                                <option value="private">Taller Privado Personalizado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Fecha Preferida</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="participants">Número de Participantes</label>
+                            <input type="number" id="participants" name="participants" min="1" max="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje o Preguntas</label>
+                            <textarea id="message" name="message" placeholder="Cuéntanos sobre tus intereses o necesidades especiales..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quechuas Expeditions</h3>
+                <p>Tu puerta de entrada a las maravillas del Perú. Experiencias auténticas, seguras y memorables.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Talleres Populares</h3>
+                <ul>
+                    <li><a href="#contacto">Cocina Peruana</a></li>
+                    <li><a href="#contacto">Textiles Andinos</a></li>
+                    <li><a href="#contacto">Cerámica Precolombina</a></li>
+                    <li><a href="#contacto">Pisco Sour</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#tours">Tours</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Cusco, Perú</li>
+                    <li><i class="fas fa-phone"></i> +51 984 123 456</li>
+                    <li><i class="fas fa-envelope"></i> info@quechuasexpeditions.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quechuas Expeditions. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
