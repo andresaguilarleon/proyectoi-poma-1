@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quechuas Expeditions - Tours y trekking en Cusco, Machu Picchu y la Amazonía peruana. Experiencias únicas con guías expertos locales.">
+    <meta name="keywords" content="Machu Picchu, Cusco tours, trekking Peru, Salkantay, Amazonía, Quechuas Expeditions">
+    <title>Destinos Quillabamba | Tours en Cusco y La Convencion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2d5016;
+            --secondary-color: #4a7c2e;
+            --accent-color: #d4af37;
+            --text-dark: #2c3e50;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        .logo:hover .logo-text {
+            color: var(--secondary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1920') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--text-dark);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 2rem 0;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .features-list i {
+            color: var(--secondary-color);
+        }
+
+        /* Destinations */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .destination-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .destination-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: var(--text-light);
+            padding: 2rem 1.5rem 1.5rem;
+        }
+
+        .destination-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tours Section */
+        .tours {
+            background: var(--bg-light);
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .tours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .tour-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .tour-card.hidden {
+            display: none;
+        }
+
+        .tour-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .tour-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .tour-card:hover .tour-image img {
+            transform: scale(1.1);
+        }
+
+        .tour-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .tour-content {
+            padding: 1.5rem;
+        }
+
+        .tour-content h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .tour-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .tour-meta i {
+            color: var(--secondary-color);
+        }
+
+        .tour-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .testimonials .section-title h2 {
+            color: var(--text-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .stars {
+            color: var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--text-light);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .tours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="imagenes/logo.png" alt="Quechuas Expeditions Logo" class="logo-img">
+                <span class="logo-text">Destinos Quillabamba</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+				<li><a href="talleres.html">Talleres</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>DESCUBRE TU PROXIMA AVENTURA Y EXPERIENCIA UNICA </h1>
+            <p>explora nuestras experiencias</p>
+            <div class="cta-buttons">
+                <a href="#tours" class="btn btn-primary">Ver Tours</a>
+                <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>15+</h3>
+                <p>Años de Experiencia</p>
+            </div>
+            <div class="stat-item">
+                <h3>5000+</h3>
+                <p>Viajeros Felices</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Tours Disponibles</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Guías Locales</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una empresa local comprometida con mostrar lo mejor del Perú</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="imagenes/foto sobre nosotros.png" alt="Equipo Quechuas Expeditions">
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Tu Aventura Comienza Aquí</h3>
+                    <p>Destinosquillabamba.com es tu operador turístico de confianza en la selva cusqueña, reconocido por ofrecer un trato cercano, seguro y experiencias auténticas que no encontrarás en ningún otro lugar. Como operadores directos, sin intermediarios, te llevamos a conocer lo mejor de Quillabamba y toda la provincia de La Convención, con el respaldo de quien conoce cada rincón, cada cultivo y cada historia de esta tierra maravillosa.</p>
+                    <p>Nos especializamos en rutas agronómicas, donde aprenderás todo sobre el café, frutas y saberes del campo; rutas de aventura y naturaleza, con cascadas, bosques y aguas curativas; además de cursos y talleres prácticos agronómicos para quienes desean profundizar en el cultivo y desarrollo sostenible.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Guías locales expertos y bilingües</li>
+                        <li><i class="fas fa-check-circle"></i> Grupos pequeños para experiencia personalizada</li>
+                        <li><i class="fas fa-check-circle"></i> Compromiso con el turismo sostenible</li>
+                        <li><i class="fas fa-check-circle"></i> Equipamiento de primera calidad</li>
+                        <li><i class="fas fa-check-circle"></i> Atención 24/7 durante tu viaje</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinos">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Destinos Populares</h2>
+                <p>Explora los lugares más emblemáticos del Perú</p>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800" alt="Machu Picchu">
+                    <div class="destination-info">
+                        <h3>Machu Picchu</h3>
+                        <p>La ciudad perdida de los Incas</p>
+                    </div>
+                </div>
+                <div class="destination-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1531968455001-fc0f11cdf965?w=800" alt="Valle Sagrado">
+                    <div class="destination-info">
+                        <h3>Valle Sagrado</h3>
+                        <p>Cuna de la civilización inca</p>
+                    </div>
+                </div>
+                <div class="destination-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1518182170546-0766bc6f9213?w=800" alt="Amazonía">
+                    <div class="destination-info">
+                        <h3>Amazonía Peruana</h3>
+                        <p>Biodiversidad única en el mundo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours" id="tours">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Nuestros Tours</h2>
+                <p>Elige tu próxima aventura</p>
+            </div>
+            <div class="filter-buttons fade-in">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="trekking">Trekking</button>
+                <button class="filter-btn" data-filter="luxury">Lujo</button>
+                <button class="filter-btn" data-filter="amazon">Amazonía</button>
+            </div>
+            <div class="tours-grid">
+                <!-- Tour 1: Salkantay Trek -->
+                <div class="tour-card fade-in" data-category="trekking">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800" alt="Salkantay Trek">
+                        <span class="tour-badge">Popular</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Salkantay Trek a Machu Picchu</h3>
+                        <p>La ruta alternativa más espectacular hacia la ciudadela inca</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 5 días</span>
+                            <span><i class="fas fa-hiking"></i> Difícil</span>
+                            <span><i class="fas fa-users"></i> Max 12</span>
+                        </div>
+                        <div class="tour-price">
+                            <div class="price">$450 <span>/persona</span></div>
+                            <a href="#contacto" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 2: Inca Trail -->
+                <div class="tour-card fade-in" data-category="trekking">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800" alt="Inca Trail">
+                        <span class="tour-badge">Clásico</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Camino Inca Tradicional</h3>
+                        <p>La ruta histórica de los Incas hacia Machu Picchu</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 4 días</span>
+                            <span><i class="fas fa-hiking"></i> Moderado</span>
+                            <span><i class="fas fa-users"></i> Max 16</span>
+                        </div>
+                        <div class="tour-price">
+                            <div class="price">$650 <span>/persona</span></div>
+                            <a href="#contacto" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 3: Luxury Machu Picchu -->
+                <div class="tour-card fade-in" data-category="luxury">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800" alt="Luxury Tour">
+                        <span class="tour-badge">Premium</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Machu Picchu de Lujo</h3>
+                        <p>Experiencia exclusiva con tren panorámico y hotel 5 estrellas</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 3 días</span>
+                            <span><i class="fas fa-star"></i> Lujo</span>
+                            <span><i class="fas fa-users"></i> Privado</span>
+                        </div>
+                        <div class="tour-price">
+                            <div class="price">$1,200 <span>/persona</span></div>
+                            <a href="#contacto" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 4: Amazon Expedition -->
+                <div class="tour-card fade-in" data-category="amazon">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1516934024742-b461fba47600?w=800" alt="Amazon Tour">
+                        <span class="tour-badge">Aventura</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Expedición Amazónica</h3>
+                        <p>Descubre la biodiversidad de la selva peruana</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 4 días</span>
+                            <span><i class="fas fa-leaf"></i> Naturaleza</span>
+                            <span><i class="fas fa-users"></i> Max 10</span>
+                        </div>
+                        <div class="tour-price">
+                            <div class="price">$550 <span>/persona</span></div>
+                            <a href="#contacto" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 5: Rainbow Mountain -->
+                <div class="tour-card fade-in" data-category="trekking">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Rainbow Mountain">
+                        <span class="tour-badge">Nuevo</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Montaña de 7 Colores</h3>
+                        <p>Visita la icónica Vinicunca y sus paisajes surrealistas</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 1 día</span>
+                            <span><i class="fas fa-hiking"></i> Moderado</span>
+                            <span><i class="fas fa-users"></i> Max 20</span>
+                        </div>
+                        <div class="tour-price">
+                            <div class="price">$80 <span>/persona</span></div>
+                            <a href="#contacto" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 6: Sacred Valley -->
+                <div class="tour-card fade-in" data-category="luxury">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1596423736737-295f560e909a?w=800" alt="Sacred Valley">
+                        <span class="tour-badge">Cultural</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Valle Sagrado Premium</h3>
+                        <p>Tour privado por las ruinas incas con almuerzo gourmet</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 1 día</span>
+                            <span><i class="fas fa-star"></i> Lujo</span>
+                            <span><i class="fas fa-users"></i> Privado</span>
+                        </div>
+                        <div class="tour-price">
+                            <div class="price">$180 <span>/persona</span></div>
+                            <a href="#contacto" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>¿Por Qué Elegirnos?</h2>
+                <p>Nos diferenciamos por nuestra calidad y compromiso</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Guías Expertos</h3>
+                    <p>Guías locales certificados con amplio conocimiento histórico y cultural</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Garantizada</h3>
+                    <p>Equipamiento de primera calidad y protocolos de seguridad estrictos</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Turismo Sostenible</h3>
+                    <p>Comprometidos con la conservación del medio ambiente y comunidades locales</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Mejor Precio</h3>
+                    <p>Precios competitivos sin comprometer la calidad del servicio</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Atención 24/7</h3>
+                    <p>Soporte continuo durante todo tu viaje para cualquier emergencia</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Experiencias Únicas</h3>
+                    <p>Rutas exclusivas y actividades auténticas fuera del turismo masivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Lo Que Dicen Nuestros Viajeros</h2>
+                <p>Experiencias reales de quienes confiaron en nosotros</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="María García" class="testimonial-avatar">
+                        <div>
+                            <h4>María García</h4>
+                            <p>España</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Una experiencia increíble. Los guías fueron muy profesionales y conocedores. El Salkantay Trek superó todas mis expectativas. ¡Totalmente recomendado!"</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith" class="testimonial-avatar">
+                        <div>
+                            <h4>John Smith</h4>
+                            <p>Estados Unidos</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best tour company in Cusco! The attention to detail was outstanding. Our guide made the Inca Trail come alive with stories and history. Worth every penny!"</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie Martin" class="testimonial-avatar">
+                        <div>
+                            <h4>Sophie Martin</h4>
+                            <p>Francia</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"L'expédition amazonienne était magique. Nous avons vu tant d'animaux et la nourriture était délicieuse. L'équipe était très attentionnée."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resolvemos tus dudas antes de viajar</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>¿Necesito estar en buena forma física para el Salkantay Trek?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El Salkantay Trek es considerado de dificultad moderada a difícil. Se recomienda tener buena condición física y haber hecho algo de ejercicio previo. Sin embargo, vamos a un ritmo pausado y hay opciones de caballo para algunos tramos si lo necesitas.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>¿Qué debo llevar en mi equipaje?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Proporcionamos una lista detallada después de la reserva. Básicamente necesitas: ropa cómoda en capas, impermeable, zapatos de trekking, protector solar, repelente, linterna frontal y documentos personales. Nosotros proporcionamos equipo de camping de calidad.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>¿Cuál es la mejor época para visitar Machu Picchu?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La temporada seca (abril a octubre) es ideal, especialmente mayo a septiembre. Sin embargo, Machu Picchu está abierto todo el año. La temporada de lluvias (noviembre a marzo) tiene menos turistas pero mayor probabilidad de lluvia.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>¿Ofrecen tours privados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡Sí! Ofrecemos tours privados para parejas, familias o grupos pequeños. Esto te permite personalizar completamente el itinerario, horarios y ritmo. Contáctanos para una cotización personalizada.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>¿Cómo funciona el mal de altura?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Recomendamos llegar a Cusco al menos 2 días antes de cualquier trek para aclimatarse. Bebemos mucha agua, evitamos alcohol los primeros días y tomamos mate de coca. Nuestros guías están entrenados para manejar situaciones relacionadas con la altura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Contáctanos</h2>
+                <p>Estamos listos para planificar tu aventura</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Información de Contacto</h3>
+                    <p>¿Tienes preguntas sobre nuestros tours? ¿Quieres una cotización personalizada? Estamos aquí para ayudarte.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Dirección</strong>
+                                <p>Calle Plateros 356, Cusco, Perú</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p>+51 984 123 456</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>info@quechuasexpeditions.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Horario</strong>
+                                <p>Lun - Sáb: 8:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/51984123456" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Escríbenos por WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-form fade-in">
+                    <form id="contactForm" action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="tour">Tour de Interés</label>
+                            <select id="tour" name="tour">
+                                <option value="">Selecciona un tour</option>
+                                <option value="salkantay">Salkantay Trek</option>
+                                <option value="inca-trail">Camino Inca</option>
+                                <option value="machu-picchu-luxury">Machu Picchu de Lujo</option>
+                                <option value="amazon">Expedición Amazónica</option>
+                                <option value="rainbow">Montaña de 7 Colores</option>
+                                <option value="sacred-valley">Valle Sagrado Premium</option>
+                                <option value="custom">Tour Personalizado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Fecha Tentativa de Viaje</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" placeholder="Cuéntanos sobre tu viaje ideal..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quechuas Expeditions</h3>
+                <p>Tu puerta de entrada a las maravillas del Perú. Experiencias auténticas, seguras y memorables.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Tours Populares</h3>
+                <ul>
+                    <li><a href="#tours">Salkantay Trek</a></li>
+                    <li><a href="#tours">Camino Inca</a></li>
+                    <li><a href="#tours">Machu Picchu de Lujo</a></li>
+                    <li><a href="#tours">Expedición Amazónica</a></li>
+                    <li><a href="#tours">Montaña de 7 Colores</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Cancelación</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Blog de Viajes</a></li>
+                    <li><a href="#">Trabaja con Nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quechuas Expeditions. Todos los derechos reservados. | Diseñado con <i class="fas fa-heart" style="color: #e74c3c;"></i> en Cusco, Perú</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Tour Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const tourCards = document.querySelectorAll('.tour-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                tourCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hidden');
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Stats Counter Animation
+        const statsSection = document.querySelector('.stats-bar');
+        let counted = false;
+
+        const countUp = (element, target) => {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (element.textContent.includes('+') ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '');
+                }
+            }, 20);
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !counted) {
+                    counted = true;
+                    document.querySelectorAll('.stat-item h3').forEach(stat => {
+                        const text = stat.textContent;
+                        const number = parseInt(text);
+                        if (!isNaN(number)) {
+                            stat.textContent = '0';
+                            countUp(stat, number);
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statsObserver.observe(statsSection);
+    </script>
+</body>
+</html>
+     
